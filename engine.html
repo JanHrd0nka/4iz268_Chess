@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Šachy - Enginy</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Navigace -->
+  <nav class="top-nav">
+    <ul>
+      <li><a href="index.html">Úvod</a></li>
+      <li><a href="pravidla.html">Pravidla</a></li>
+      <li><a href="historie.html">Historie</a></li>
+      <li><a href="champs.html">Světoví mistři</a></li>
+      <li><span class="active">Enginy</span></li>
+    </ul>
+  </nav>
+
+  <div class="content">
+
+    <!-- Úvod -->
+    <section>
+      <h1>Šachové engine</h1>
+      <p>
+        Šachové enginy jsou programy, které dokážou vyhodnocovat pozice a hledat
+        nejlepší možné tahy. V současnosti hrají mnohem lépe než i ti nejlepší
+        velmistři a staly se nepostradatelným nástrojem pro trénink, analýzu partií
+        i rozvoj šachové teorie. Moderní enginy dokáží analyzovat miliardy pozic
+        za sekundu a často nacházejí tahy, které by lidský hráč nikdy neviděl.
+      </p>
+    </section>
+
+    <!-- Jak fungují -->
+    <section>
+      <h2>Jak šachové enginy fungují</h2>
+
+      <h3>1. Vyhodnocovací funkce</h3>
+      <p>
+        Každý engine hodnotí šachovou pozici pomocí číselných hodnot. Například
+        +1.0 znamená mírnou výhodu bílého, −0.5 malou výhodu černého. Hodnocení
+        bere v úvahu materiál, aktivitu figur, bezpečnost krále nebo strukturu pěšců.
+      </p>
+
+      <h3>2. Prohledávání tahů</h3>
+      <p>
+        Hlavní síla enginu spočívá v tom, že dokáže prohledat obrovské množství
+        možných pokračování i několik desítek tahů dopředu. Používá algoritmy jako
+        <strong>Minimax</strong>, <strong>Alpha-Beta pruning</strong> nebo
+        <strong>Iterative Deepening</strong>.
+      </p>
+
+      <h3>3. Databáze zahájení</h3>
+      <p>
+        Většina enginů používá tzv. <em>opening book</em> – databázi zahájení,
+        která obsahuje tisíce dobře prověřených variant z lidských i počítačových
+        partií.
+      </p>
+
+      <h3>4. Endgame tablebases</h3>
+      <p>
+        Jedná se o dokonalé databáze koncovek, které přesně určují, zda je pozice
+        vyhraná, remízová nebo prohraná. Některé koncovky jsou díky nim vyřešené
+        naprosto přesně.
+      </p>
+    </section>
+
+    <!-- Historie -->
+    <section>
+      <h2>Vývoj šachových enginů</h2>
+
+      <h3>Období klasických enginů (1990–2017)</h3>
+      <p>
+        První silné enginy spoléhaly hlavně na ručně psaná pravidla od šachistů.
+        Hodnotily materiál, aktivitu, výstavbu pozice a jednotně prohledávaly tahy.
+        Patřily sem enginy jako Rybka, Fritz nebo starší verze Komoda a Stockfishe.
+      </p>
+
+      <h3>Revoluce neuronových sítí (od 2017)</h3>
+      <p>
+        Roku 2017 představil Google DeepMind systém <strong>AlphaZero</strong>,
+        který změnil celý šachový svět. Nepoužíval žádné lidské znalosti — učil
+        se hraním sám proti sobě a vytvářel vlastní styl hry. Brzy poté vznikl
+        open-source projekt <strong>Leela Chess Zero (Lc0)</strong>, který se stal
+        komunitní obdobou AlphaZero.
+      </p>
+    </section>
+
+    <!-- Nejlepší enginy -->
+    <section>
+      <h2>Nejsilnější šachové enginy dneška</h2>
+
+      <div class="grid">
+        <div class="card">
+          <img src="img/engines/Stockfish.jpg" alt="Stockfish" class="card-img">
+          <div class="card-content">
+            <h3>Stockfish</h3>
+            <p>
+              Nejlepší engine současnosti. Kombinuje klasické prohledávání s
+              moderními neuronovými sítěmi (NNUE). Je open source a zcela zdarma.
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="img/engines/Lc0.jpg" alt="Leela Chess Zero" class="card-img">
+          <div class="card-content">
+            <h3>Leela Chess Zero (Lc0)</h3>
+            <p>
+              Engine založený čistě na hlubokých neuronových sítích a samoučení.
+              Hraje velmi „lidsky“ a často obětuje figury pro dlouhodobé výhody.
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="img/engines/Komodo Dragon.jpg" alt="Komodo Dragon" class="card-img">
+          <div class="card-content">
+            <h3>Komodo Dragon</h3>
+            <p>
+              Komerční engine, který je známý svým pozičním stylem. Ve srovnání se
+              Stockfishem nebo Leelou je slabší, ale pro analýzu je stále výborný.
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="img/engines/AlphaZero.png" alt="AlphaZero" class="card-img">
+          <div class="card-content">
+            <h3>AlphaZero</h3>
+            <p>
+              Program, který způsobil revoluci. Už se dál nevyvíjí, ale jeho přístup
+              k samoučení změnil vývoj enginů navždy.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Vliv enginů -->
+    <section>
+      <h2>Jak enginy změnily šach</h2>
+
+      <ul class="bullet-list">
+        <li>Profesionální hráči je používají pro trénink každý den.</li>
+        <li>Výrazně rozšířily teorii zahájení a objevily nové strategie.</li>
+        <li>Bez enginů se dnes prakticky neprovádí žádná analýza partií.</li>
+        <li>Hrají zásadní roli při odhalování cheatingu na turnajích.</li>
+        <li>Lidský styl hry je díky nim mnohem přesnější a dynamičtější.</li>
+      </ul>
+    </section>
+
+  </div>
+
+</body>
+
+</html>

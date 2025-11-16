@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Šachy - Pravidla</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Navigace -->
+  <nav class="top-nav">
+    <ul>
+      <li><a href="index.html">Úvod</a></li>
+      <li><span class="active">Pravidla</span></li>
+      <li><a href="historie.html">Historie</a></li>
+      <li><a href="champs.html">Světoví mistři</a></li>
+      <li><a href="engine.html">Enginy</a></li>
+    </ul>
+  </nav>
+
+  <!-- Obsah -->
+  <div class="content">
+    <h1>Pravidla šachu</h1>
+
+    <!-- Základní principy -->
+    <section>
+      <h2>1. Průběh hry</h2>
+      <p>
+        Šach se hraje na čtvercové desce o rozměru <strong>8×8 polí</strong>, střídavě světlých a tmavých.
+        Každý hráč má na začátku <strong>16 figur</strong> — 8 pěšců, 2 jezdce, 2 střelce, 2 věže, dámu a krále.
+        Bílé figury stojí na první a druhé řadě, černé na sedmé a osmé.
+      </p>
+
+      <p>
+        Hra začíná tahem <strong>bílého hráče</strong> a poté se hráči střídají po jednom tahu.
+        Každý tah spočívá v posunu jedné figury podle jejích pravidel pohybu.
+        <strong>Na jednom poli může stát vždy jen jedna figura.</strong>
+      </p>
+
+      <p>
+        Pokud se hráč pohne na pole, kde stojí soupeřova figura, tato figura je <strong>vyhozena z hry</strong>.
+        Figury mohou brát pouze <strong>soupeřovy</strong> kameny, nikdy vlastní.
+        Vyhozené figury se už na šachovnici nevracejí, s výjimkou <strong>proměny pěšce</strong>.
+      </p>
+
+      <p>
+        Většina figur se při svém pohybu <strong>nesmí přeskakovat</strong> přes jiné kameny —
+        jedinou výjimkou je <strong>jezdec</strong>, který může přeskočit i zablokované pozice.
+      </p>
+
+      <p>
+        Cílem hry je <strong>mat</strong> — postavení soupeřova krále do takové situace,
+        kdy je v šachu a nemůže uniknout na žádné bezpečné pole.
+      </p>
+    </section>
+
+    <!-- Figurky -->
+    <section>
+      <h2>2. Šachové figurky</h2>
+
+      <p>
+        Každá šachová figura má svůj vlastní způsob pohybu a hodnotu, která vyjadřuje její sílu ve hře.
+        Silnější figury jsou cennější, ale i ty slabší mohou být rozhodující, pokud se používají správně.
+        Níže najdete přehled všech figur, jejich bodové ohodnocení, výchozí postavení a popis pohybu.
+      </p>
+
+      <table class="pieces-table">
+        <thead>
+          <tr>
+            <th>Název</th>
+            <th>Figurka</th>
+            <th>Bodové ohodnocení</th>
+            <th>Počáteční pozice (bílý)</th>
+            <th>Počáteční pozice (černý)</th>
+            <th>Pohyb</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Pěšec</td>
+            <td class="icon">♙</td>
+            <td>1</td>
+            <td>celá 2. řada</td>
+            <td>celá 7. řada</td>
+            <td>O jedno pole dopředu (ze startu může o dvě). Bere soupeře diagonálně. Na poslední řadě se promění v
+              jinou figuru (Jezdec, Střelec, Věž nebo Dáma).</td>
+          </tr>
+          <tr>
+            <td>Jezdec</td>
+            <td class="icon">♘</td>
+            <td>3</td>
+            <td>b1, g1</td>
+            <td>b8, g8</td>
+            <td>Pohybuje se do tvaru písmene „L“ – dvě pole jedním směrem a jedno kolmo. Přeskakuje ostatní figury.</td>
+          </tr>
+          <tr>
+            <td>Střelec</td>
+            <td class="icon">♗</td>
+            <td>3</td>
+            <td>c1, f1</td>
+            <td>c8, f8</td>
+            <td>Pohybuje se libovolný počet polí diagonálně.</td>
+          </tr>
+          <tr>
+            <td>Věž</td>
+            <td class="icon">♖</td>
+            <td>5</td>
+            <td>a1, h1</td>
+            <td>a8, h8</td>
+            <td>Pohybuje se libovolný počet polí vodorovně nebo svisle.</td>
+          </tr>
+          <tr>
+            <td>Dáma</td>
+            <td class="icon">♕</td>
+            <td>9</td>
+            <td>d1</td>
+            <td>d8</td>
+            <td>Pohybuje se libovolný počet polí svisle, vodorovně i diagonálně. Nejsilnější figura.</td>
+          </tr>
+          <tr>
+            <td>Král</td>
+            <td class="icon">♔</td>
+            <td>—</td>
+            <td>e1</td>
+            <td>e8</td>
+            <td>Pohybuje se o jedno pole kterýmkoli směrem. Nesmí vstoupit do šachu. Cílem hry je dát soupeřovu králi
+              mat.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Šach a mat -->
+    <section>
+      <h2>3. Šach a mat</h2>
+      <p>
+        <strong>Šach</strong> znamená, že král je ohrožen soupeřovou figurou. Hráč, který má krále v šachu,
+        musí šach ihned odstranit – buď krále posune, ohrožující figuru vezme, nebo jí zablokuje cestu.
+      </p>
+      <p>
+        <strong>Mat</strong> nastává, když je král v šachu a nemá žádnou možnost se bránit.
+        V tu chvíli hra končí a soupeř, který mat dal, vítězí.
+      </p>
+      <p>
+        Existuje také <strong>pat</strong> – situace, kdy hráč není v šachu, ale nemá žádný možný tah.
+        Hra pak končí remízou.
+      </p>
+    </section>
+
+    <!-- Speciální tahy -->
+    <section class="special-moves">
+      <h2>4. Speciální tahy</h2>
+
+      <h3>Rošáda</h3>
+      <p>
+        Rošáda je speciální tah krále a věže. Král se při ní posune o dvě pole směrem k věži
+        a věž se přesune na pole hned vedle něj. Rošádu lze provést pouze pokud:
+      </p>
+      <ul>
+        <li>král ani daná věž se dosud nepohnuli,</li>
+        <li>mezi nimi nejsou žádné figury,</li>
+        <li>král není v šachu, ani šachem neprochází.</li>
+      </ul>
+      <p>
+        Existují dva typy rošády:
+        <strong>krátká rošáda</strong> (na stranu krále) a
+        <strong>dlouhá rošáda</strong> (na stranu dámy).
+      </p>
+
+      <h3>En passant</h3>
+      <p>
+        Tah <em>en passant</em> („mimochodem“) je speciální braní pěšcem.
+        Když soupeřův pěšec poprvé táhne o dvě pole vpřed a skončí vedle tvého pěšce,
+        můžeš ho následujícím tahem sebrat, jako by se pohnul jen o jedno pole.
+        Tento tah musí být proveden ihned — jinak právo na něj zaniká.
+      </p>
+    </section>
+  </div>
+
+</body>
+
+</html>

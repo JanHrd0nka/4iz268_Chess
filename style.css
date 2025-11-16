@@ -1,0 +1,147 @@
+/* ====== Základní styl ====== */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  margin: 60px;
+}
+
+h1 {
+  color: #007acc;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.content {
+  max-width: 1000px;
+  margin: 30px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/* ====== Navigace ====== */
+.top-nav {
+  background-color: #1E90FF;
+  width: fit-content;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+
+.top-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.top-nav li {
+  margin: 0 15px;
+}
+
+.top-nav a,
+.top-nav .active {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 15px;
+  display: block;
+  border-radius: 5px;
+}
+
+/* sjednoceno */
+.top-nav a:hover,
+.top-nav .active {
+  background-color: #104E8B;
+}
+
+
+/* ====== Tabulka figur ====== */
+.pieces-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 16px;
+}
+
+.pieces-table th,
+.pieces-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  vertical-align: top;
+}
+
+.pieces-table th {
+  background-color: #1E90FF;
+  color: white;
+  text-align: center;
+}
+
+.pieces-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.pieces-table tr:hover {
+  background-color: #eaf4ff;
+}
+
+.icon {
+  font-size: 26px;
+  text-align: center;
+}
+
+
+/* ====== Grids ====== */
+.grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+
+/* ====== Cards ====== */
+.card {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+
+  display: flex;
+  flex-direction: column;
+
+  height: 400px;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+}
+
+.card-img {
+  width: 100%;
+  height: 50%;
+  object-fit: contain;
+  display: block;
+  background-color: #f0f0f0;
+}
+
+.card-content {
+  padding: 12px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+  text-align: center;
+}
+
+.card-content h3 {
+  margin: 0 0 8px;
+  color: #1E90FF;
+}
+
+.card-content p {
+  margin: 0;
+}
