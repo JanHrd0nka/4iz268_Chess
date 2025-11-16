@@ -145,3 +145,42 @@ h1 {
 .card-content p {
   margin: 0;
 }
+
+@media print {
+  .top-nav {
+    display: none;
+  }
+
+  body {
+    margin: 0;
+  }
+
+  .content {
+    box-shadow: none;
+    padding: 0;
+    max-width: 100%;
+  }
+
+  section,
+  .pieces-table,
+  .card {
+    page-break-inside: avoid;
+  }
+
+  body,
+  main,
+  section,
+  p,
+  h1,
+  h2,
+  h3,
+  td,
+  th {
+    color: black !important;
+    background-color: white !important;
+  }
+
+  .pieces-table th {
+    font-weight: bold;
+  }
+}
